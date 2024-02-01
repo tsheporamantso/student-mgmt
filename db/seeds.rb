@@ -7,3 +7,18 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+student = Student.create(
+    first_name: 'Gladwin',
+    last_name: 'Ramantso',
+    email: 'tshepo.ramantso@outlook.com'
+)
+
+# Create 20 times  dumpy student data
+# 20.times do |i|
+#     Student.create(
+#         first_name: "Student #{i+1}",
+#         last_name: "Lname #{i+1}",
+#         email: "student#{i+1}@example.com"
+#     )
+# end
