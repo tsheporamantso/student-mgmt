@@ -1,9 +1,4 @@
-<% if @student.errors.any? %>
-  <h2>The following errors prevented student creation</h2>
-  <% @student.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
-<% end %>
+<%= render '/shared/message' %>
 
 <h1>Create student</h1>
 
