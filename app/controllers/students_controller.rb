@@ -24,9 +24,18 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    @student = Student.find(params[:id])
   end
 
   def update
+    @student = Student.find(student_params)
+
+    if @student.update
+      flash[:success] = 'Student updated successfully'
+      redirect_to student_path(@student)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
