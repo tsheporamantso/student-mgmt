@@ -1,12 +1,13 @@
 <h1>Student</h1>
 
 <div class="">
-  <p>First Name: <%= @student.first_name %></p>
-  <p>Last Name: <%= @student.last_name %></p>
-  <p>email: <%= @student.email %></p>
+  <p><strong>First Name:</strong> <%= @student.first_name %></p>
+  <p><strong>Last Name:</strong> <%= @student.last_name %></p>
+  <p><strong>email:</strong> <%= @student.email %></p>
 </div>
 
 <%= link_to 'Delete', student_path(@student), data: { 
   turbo_method: :delete,
   turbo_confirm: 'Are you sure?'
- } %>
+ } %> |
+<%= link_to 'Edit', edit_student_path(@student) %>
