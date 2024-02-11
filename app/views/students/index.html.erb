@@ -6,6 +6,7 @@
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email address</th>
+    <th>Actions</th>
   </tr>
 </thead>
 <tbody>
@@ -14,6 +15,12 @@
       <th><%= student.first_name %></th>
       <th><%= student.last_name %></th>
       <th><%= student.email %></th>
+      <th><%= link_to 'show', student_path(student)  %></th>
+      <th><%= link_to 'edit', edit_student_path(student)  %></th>
+      <th><%= link_to 'delete', student_path(student), data: {
+        turbo_method: :delete,
+        turbo_confirm: 'Are you sure?'
+      }  %></th>
     </tr>
   <% end %>
 </tbody>
