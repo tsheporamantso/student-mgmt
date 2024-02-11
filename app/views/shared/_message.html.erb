@@ -1,0 +1,8 @@
+<% if @student.errors.any? %>
+  <h2>The following errors prevented student from being created!</h2>
+  <ul>
+    <% @student.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
